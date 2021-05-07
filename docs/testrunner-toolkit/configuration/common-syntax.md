@@ -4,8 +4,6 @@ title: Common Configuration Syntax
 sidebar_label: Common Syntax
 ---
 
-import Highlight from '../../../src/components/highlight.jsx'
-
 The section below provides details and explanations regarding the common syntax/fields of `.sauce/config.yml`.
 
 ## `apiVersion`
@@ -171,10 +169,44 @@ __Example__:
       lodash: "4.17.20"
       "@babel/preset-typescript": "7.12"
       "@cypress/react": "^5.0.1"
-
+    strictSSL: false
 ```
 
-⚠️ `registry` configuration is only supported in latest cypress docker image. No other frameworks, or Sauce Labs cloud.
+### `registry`
+
+__Description__: Specifies the location of the npm registry source. If the registry source is a private address and you are running tests on Sauce Cloud, you can provide access to the registry source using [Sauce Connect](/testrunner-toolkit/running-tests#running-tests-on-sauce-labs-with-sauce-connect).
+
+__Type__: *string*
+
+__Example__:
+```yaml
+  registry: https://registry.npmjs.org
+```
+
+### `packages`
+
+__Description__: Specifies npm packages that are required to run tests and should, therefore, be included in the bundle. See [Including Node Dependencies](/testrunner-toolkit/configuration#including-node-dependencies).
+
+__Type__: *object*
+
+__Example__:
+```yaml
+  packages:
+    lodash: "4.17.20"
+    "@babel/preset-typescript": "7.12"
+    "@cypress/react": "^5.0.1"
+```
+
+### `strictSSL`
+
+__Description__: Instructs npm to perform SSL key validation when making requests to the registry via https (`true`) or not (`false`). Defaults to `true` when not set.
+
+__Type__: *boolean*
+
+__Example__:
+```yaml
+    strictSSL: false
+```
 
 ## `defaults`
 
@@ -249,7 +281,7 @@ __Example__:
 
 ### `browserVersion`
 
-<p><small><Highlight color="#ad1415">sauce cloud only</Highlight></small></p>
+<p><small><span class="highlight sauce-cloud">Sauce Cloud only</span></small></p>
 
 __Description__: Version of the browser in which the test runs.
 
@@ -262,7 +294,7 @@ __Example__:
 
 ### `platformName`
 
-<p><small><Highlight color="#ad1415">sauce cloud only</Highlight></small></p>
+<p><small><span class="highlight sauce-cloud">Sauce Cloud only</span></small></p>
 
 __Description__: Operating system on which the browser and test runs. This value is optional and will be defaulted to a sensible platform. Set this value explicitly if you'd like to have greater control over where your tests should run.
 
@@ -275,7 +307,7 @@ __Example__:
 
 ### `screenResolution`
 
-<p><small><Highlight color="#ad1415">sauce cloud only</Highlight></small></p>
+<p><small><span class="highlight sauce-cloud">Sauce Cloud only</span></small></p>
 
 __Description__: Field where you can change the browser window screen resolution.
 
@@ -286,7 +318,9 @@ __Example__:
     screenResolution: "1920x1080"
 ```
 
-> For all available resolutions please visit [this documentation page](https://wiki.saucelabs.com/display/DOCS/Test+Configuration+Options#TestConfigurationOptions-SauceLabsCustomTestingOptions).
+:::note
+For all available resolutions please see [Sauce Labs Custom Testing Options](https://wiki.saucelabs.com/display/DOCS/Test+Configuration+Options#TestConfigurationOptions-SauceLabsCustomTestingOptions).
+:::
 
 
 ### `mode`

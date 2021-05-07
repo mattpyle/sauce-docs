@@ -360,6 +360,11 @@ module.exports = {
                     'api-testing/learn-more/planning-your-test',
                     'api-testing/learn-more/the-variables-system-in-api-fortress',
                     'api-testing/learn-more/working-with-the-response-object',
+<<<<<<< HEAD
+=======
+                    'api-testing/learn-more/the-working-copy-published-tests',
+
+>>>>>>> 7da62cebde25a23c123c0b215394855001f5061e
                 ],
             },
             {
@@ -539,6 +544,7 @@ module.exports = {
                     'testrunner-toolkit/configuration/puppeteer',
                     'testrunner-toolkit/configuration/testcafe',
                     'testrunner-toolkit/configuration/espresso',
+                    'testrunner-toolkit/configuration/cucumber',
                 ],
             },
             'testrunner-toolkit/running-tests',
@@ -556,8 +562,6 @@ module.exports = {
             },
             'testrunner-toolkit/typescript',
             'testrunner-toolkit/saucectl',
-            'testrunner-toolkit/faqs',
-            'testrunner-toolkit/support',
         ],
         "Visual": [
             'visual',

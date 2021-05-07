@@ -5,7 +5,8 @@ sidebar_label: Cypress
 ---
 import Common from './common.md'
 
-## Sample Configuration File
+
+## Example Configuration
 
 ```yaml reference
 https://github.com/saucelabs/saucectl-cypress-example/blob/master/.sauce/config.yml

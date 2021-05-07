@@ -19,9 +19,12 @@ Sauce Runner for Real Devices provides the ability to run Espresso and XCUITest 
 
 >**NOTE**: All examples in this page assume knowledge of [Sauce Runner General Usage](/dev/cli/espresso-xcuitest). Please review before proceeding.
 
-<br/>
+## What You'll Need
 
-## Required
+* Your Sauce Labs account credentials.
+* Your mobile app file (both debug and non-debug app) and test file.
+* Have the Sauce Runner for Real Devices downloaded and installed to your local machine.
+* Prior to using the CLI Reference below, navigate (`cd`) to the specific folder directory on your local machine where you downloaded and placed your Sauce Runner file (i.e., `runner.jar`).
 
 :::tip
 
@@ -31,6 +34,7 @@ java -jar runner.jar --help
 ```
 :::
 
+## Required
 
 These commands and flags are required for use with Sauce Runner for Real Devices. They are not compatible for use with Real Device Cloud [YAML file configuration](dev/cli/espresso-xcuitest/yaml-config).
 
@@ -226,7 +230,7 @@ __Description__: specify a comma-separated list of test cases or test classes on
 <br/>
 
 ### `--e`
-<p><small><Highlight color="#946f59">Espresso Only</Highlight></small></p>
+<p><small><Highlight color="#946f59">Android/Espresso Only</Highlight></small></p>
 
 __Description__: specify a list of test options to Espresso. The key-value pairs supported by Espresso are documented here: [Android Developers—am instrument options](https://developer.android.com/studio/test/command-line#AMOptionsSyntax).
 
@@ -290,7 +294,7 @@ __Description__: specifies the URL of an alternative REST endpoint to use. For a
 
 ### `--useTestOrchestrator`
 
-<p><small><Highlight color="#946f59">Espresso Only</Highlight></small></p>
+<p><small><Highlight color="#946f59">Android/Espresso Only</Highlight></small></p>
 
 __Description__: if set, the instrumentation will start with Test Orchestrator version `1.1.1` in use.
 
